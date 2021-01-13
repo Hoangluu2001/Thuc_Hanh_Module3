@@ -49,10 +49,22 @@
                     </div>
 
 
+{{--                    <div class="form-group">--}}
+{{--                        <label>Trang Thai</label>--}}
+{{--                        <input type="text" class="form-control" name="status" value="{{ $store->status }}" required>--}}
+{{--                    </div>--}}
+
                     <div class="form-group">
-                        <label>Trang Thai</label>
-                        <input type="text" class="form-control" name="status" value="{{ $store->status }}" required>
+                        <label>Trạng thái</label>
+
+{{--                       <input type="text" class="form-control" name="status" value="{{ $store->status }}" required>--}}
+                        <select name="status" id="status">
+                            <option value="Hoạt động">Hoạt động</option>
+                            <option value="Ngừng hoạt động ">Ngừng hoạt động</option>
+                            </option>
+                        </select>
                     </div>
+
 
 
 

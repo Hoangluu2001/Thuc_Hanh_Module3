@@ -39,9 +39,19 @@
                         <input type="text" class="form-control" name="manager" required>
                     </div>
 
+{{--                    <div class="form-group">--}}
+{{--                        <label>Trạng Thái  </label>--}}
+{{--                        <input type="text" class="form-control" name="status" >--}}
+{{--                    </div>--}}
+
+
                     <div class="form-group">
-                        <label>Trạng Thái  </label>
-                        <input type="text" class="form-control" name="status" >
+                        <label>Trạng thái</label>
+                        <select name="status" id="status">
+                            <option value="Hoạt động">Hoạt động</option>
+                            <option value="Ngừng hoạt động ">Ngừng hoạt động</option>
+                            </option>
+                        </select>
                     </div>
 
                     <button type="submit" class="btn btn-primary">Thêm mới</button>
