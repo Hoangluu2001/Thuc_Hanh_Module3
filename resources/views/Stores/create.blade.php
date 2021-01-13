@@ -12,27 +12,53 @@
                     <div class="form-group">
                         <label>Mã Số Đại Lý </label>
                         <input type="number" class="form-control" name="code"  required>
+
+{{--                        @if($errors->any())--}}
+{{--                            <p class="alert-danger my-sm-4">{{ $errors->first('code') }}</p>--}}
+{{--                        @endif--}}
                     </div>
+
 
                     <div class="form-group">
                         <label>Tên Đại Lý </label>
                         <input type="text" class="form-control" name="name"  required>
+
+{{--                        @if($errors->any())--}}
+{{--                            <p class="alert-danger my-sm-4">{{ $errors->first('name') }}</p>--}}
+{{--                        @endif--}}
                     </div>
 
                     <div class="form-group">
                         <label>Điện Thoai </label>
                         <input type="number" class="form-control" name="phone" required>
+
+{{--                        @if($errors->any())--}}
+{{--                            <p class="alert-danger my-sm-4">{{ $errors->first('phone') }}</p>--}}
+{{--                        @endif--}}
                     </div>
+
+
 
                     <div class="form-group">
                         <label>Email</label>
                         <input type="email" class="form-control" name="email" >
+
+{{--                        @if($errors->any())--}}
+{{--                            <p class="alert-danger my-sm-4">{{ $errors->first('email') }}</p>--}}
+{{--                        @endif--}}
                     </div>
+
 
                     <div class="form-group">
                         <label> Địa Chỉ </label>
                         <input type="text" class="form-control" name="address" required>
+
+{{--                        @if($errors->any())--}}
+{{--                            <p class="alert-danger my-sm-4">{{ $errors->first('address') }}</p>--}}
+{{--                        @endif--}}
                     </div>
+
+
 
                     <div class="form-group">
                         <label>Tên người Quản Lý  </label>
