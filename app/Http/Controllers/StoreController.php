@@ -15,8 +15,9 @@ class StoreController extends Controller
      */
     public function index()
     {
-        $stores = Store::all();
+//        $stores = Store::all();
 
+        $stores =Store::paginate(5);
         return view('Stores.list', compact('stores'));
     }
 
@@ -123,26 +124,9 @@ class StoreController extends Controller
         if ($request->has('name')){
             return redirect()->route('stores.list');
         }
-        $stores =DB::table('stores')->where('name', 'like', '%'  . $keyword . '%')->get();
+        $stores =DB::table('stores')->where('name', 'like', '%'  . $keyword . '%')->paginate(5);
         return view('Stores.list', compact( 'stores'));
     }
 
-
-//    public function search(Request $request)
-//    {
-//        $keyword = $request->input('keyword');
-//        if ($request->has('name')){
-//            return redirect()->route('stores.list');
-//        }
-//        $stores = Store::where('name', 'LIKE', '%'  . $keyword . '%')->get();
-//        return view('Stores.list', compact( 'stores'));
-//    }
-
-//    public function search(Request $request)
-//    {
-//        $search = $request->title;
-//        $stores = DB::table('stores')->where('name', 'LIKE', "%{$search}%")->get();
-//        return view("Stores.list", compact('stores'));
-//    }
 
 }

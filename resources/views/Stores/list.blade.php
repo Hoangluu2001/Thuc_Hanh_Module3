@@ -44,7 +44,7 @@
 {{--                @else--}}
                     @foreach($stores as $key => $store)
                         <tr>
-                            <th scope="row">{{ ++$key }}</th>
+                            <th scope="row">{{ $key +$stores-> firstItem()  }}</th>
                             <td>{{ $store->code }}</td>
                             <td>{{ $store->name }}</td>
                             <td>{{ $store->phone }}</td>
@@ -59,6 +59,12 @@
 {{--                @endif--}}
                 </tbody>
             </table>
+
+
+
+            <div style="font-size:15px;text-align: right!important; ">
+                {{$stores->links("pagination::bootstrap-4")}}
+            </div>
 
         </div>
 
